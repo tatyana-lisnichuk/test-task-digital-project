@@ -1,0 +1,83 @@
+
+$aboutbcg: #fbfbfb;
+$footerbgc:#2c2c2c;
+$linecolor: #d8d8d8;
+$footercolor: #c8c8c8;
+$white: #ffffff;
+$gray1: #333333;
+$gray4: #bdbdbd;
+$gray6: #f2f2f2;
+$inputbcg: #f3f3f3;
+$sffont: "SF Pro Display";
+$inputcolor: #8d8d8d;
+$inputsmblcol: #c30000;
+$sliderbtnbord: #f2f2f2;
+
+// шаблоны
+%h2 {
+  color:$gray4;
+  font-weight: 300;
+  font-size: 64px;
+  
+}
+%h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+}
+%tasktext {
+  color:$gray1;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 400;
+  margin-left: 30px;
+    @media (max-width: 1092px){
+      font-size: 18px;
+    }
+}
+%transition {
+  transition: all 0.3s ease-in-out;
+}
+%linkhover {
+  opacity: 0.5;
+}
+%inputstyle {
+  padding: 14px 21px;
+  color: $inputcolor;
+  background-color: $inputbcg;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+%btntext {
+  font-size: 12px;
+  text-transform: uppercase;
+  i {
+    margin-left: 15px;
+  }
+}
+%btnstyle {
+  padding-bottom: 24px;
+  color: $gray1;
+  padding-top: 24px;
+  @extend %btntext;
+  max-width: 222px;
+  width: 100%;
+  background: $white;
+  border: 1px solid $white;
+}
+%darkhover {
+  color: $white;
+  background: $gray1;
+  border: 1px solid $sliderbtnbord;
+}
+%darkbtnstyle {
+  background-color: $gray1;
+  color: $white;
+  border: 1px solid $gray1;
+}
+%lighthover {
+  color: $gray1;
+  background: $white;
+  
+}

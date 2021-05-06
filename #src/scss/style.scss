@@ -1,0 +1,521 @@
+@import "nullstyle.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "media.scss";
+ 
+body {
+  font-family: 'TT Hoves';
+  font-weight: 400;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.right-side {
+  max-width: 770px;
+  width: 100%;
+  margin-right: 0;
+  margin-left: auto;
+}
+.h2 {
+  
+  @extend %h2;
+}
+.h4 {
+  @extend %h4;
+}
+.button {
+  @extend %btnstyle;
+}
+// Header
+.header {
+  font-size: 12px;
+  padding: 30px 0px;
+  min-height: 102px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo-link {
+    transition: .3s;
+    z-index: 505;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &__logo {
+    width: 70px;
+    cursor: pointer;
+  }
+}
+
+.menu {
+  &__icon {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    margin-left: 0;
+    margin-right: auto;
+    line-height: 12px;
+  }
+  &__item {
+    font-size: 12px;
+    letter-spacing: 20%;
+    margin-right: 60px;
+    text-transform: uppercase;
+  }
+  &__link {
+    display: inline-block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    // margin: 3px 0px;
+    // border-top: transparent solid 1px;
+    // border-bottom: transparent solid 1px;
+    //   &:hover {
+    //     border-top: $gray1 solid 1px;
+    //     border-bottom: $gray1 solid 1px;
+    //   }
+    position: relative;
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border-top: $gray1 solid 1px;
+      @extend %transition;
+      width: 100%;
+      opacity: 0;
+      }
+    &:hover::before {
+        opacity: 1;
+        }
+    &::after {
+      content: " ";
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      border-bottom: $gray1 solid 1px;
+      @extend %transition;
+      width: 100%;
+      opacity: 0;
+      
+      }
+    &:hover::after {
+      opacity: 1;
+      }
+    }
+}
+
+
+// Hero
+.hero {
+  position: relative;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  .h1 {
+    font-size: 64px;
+    color: $gray4;
+    font-weight: 300;
+    max-width: 278px;
+    line-height: 64px;
+    &__home {
+      font-weight: 700;
+      color: $gray1;
+    }
+  }
+  &__slider-wrap {
+    overflow: hidden;
+    // width: 67%;
+    // max-width: 770px;
+    width: 100%;
+    // min-height: 830px;
+  }
+  &__slider {
+    display: flex;
+    
+  }
+  &__slide {
+    width: 100%;
+    min-height: 830px;
+    // height: 100%;
+    overflow: hidden;
+    position: relative;
+    .button {
+      background: $white;
+      position: absolute;
+      z-index: 15;
+      bottom: 0;
+      left: 0;
+      
+      @extend %transition;
+      &:hover 
+        {
+          @extend %darkhover;
+        }
+    }
+    &__slide-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__slider-btn {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid $sliderbtnbord;
+    margin-right: 20px;
+    margin-bottom: 90px;
+    @extend %transition;
+    .fas {
+      color: $gray1;
+    }
+    &:hover,
+    &:active {
+      background: $gray6;
+    }
+   
+  }
+  &__slider-btn-div {
+    color: $gray4;
+    font-size: 24px;
+    position: absolute;
+    bottom: 105px;
+    .fa-slash {
+    transform: rotate(90deg);
+    margin-right: 20px;
+    font-size: 20px;
+    }
+  }
+  &__slide-num {
+    display: inline-block;
+    width: 30px;
+  }
+}
+
+// About
+.about {
+  padding: 60px 0px;
+  .container {
+    display: flex;
+    background-color: $aboutbcg;
+  }
+    &__left-side {
+      padding-left: 100px;
+      padding-top: 30px;
+      margin-bottom: -30px;
+      &_top {
+        margin-bottom: 30px;
+      }
+    }
+  .right-side {
+    display: flex;
+    padding-top: 30px;
+    &__img-wrap {
+      margin-top: 60px;
+      max-width: 270px;
+      min-height: 345px;
+    }
+    &__main {
+      margin-left: 30px;
+      &_text {
+      font-weight: 300;
+      line-height: 25px;
+      margin: 20px 0px;
+      }
+      .button {
+        background-color: $white;
+        @extend %transition;
+        &:hover {
+          @extend %darkhover;
+        }
+      }
+    }
+  }
+}
+
+// Tasks
+.tasks {
+  padding: 60px 0px;
+  &__grid {
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+  }
+  &__item {
+    display: flex;
+  }
+  &__item-num {
+    display: block;
+    font-size: 200px;
+    font-family: $sffont;
+    color: $gray6;
+    line-height: 80%;
+  }
+  &__item-text1 {
+    max-width: 280px;
+    @extend %tasktext;
+  }
+  &__item-text2 {
+    max-width: 420px;
+    @extend %tasktext;
+  }
+
+}
+// Projects
+.projects {
+  &__grid-top {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  &__grid-bottom {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1.75fr 1.36fr;
+    min-height: 255px;
+    margin-bottom: 30px;
+  }
+  &__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  &__grid-item-1,
+  &__grid-item-2,
+  &__grid-item-3,
+  &__grid-item-4,
+  &__grid-item-5 {
+    position: relative;
+    cursor: pointer;
+  }
+  &__grid-item-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: $gray1;
+    opacity: 0;
+    padding: 48px 78px 78px 78px;
+    color: $white;
+    @extend %transition;
+    &-title {
+      font-size: 64px;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+    &-btn {
+      @extend %btntext;
+      background: transparent;
+      color: $white;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__grid-item-3,
+  &__grid-item-4,
+  &__grid-item-5 {
+    .projects__grid-item-hover {
+    padding: 20px 30px;
+    }
+  }
+  &__grid-item-3,
+  &__grid-item-5  {
+    .projects__grid-item-hover {
+      padding: 20px 30px;
+    }
+    .projects__grid-item-hover-title {
+      font-size: 32px;
+    }
+  }
+ .button {
+   display: block;
+   margin-right: 0px;
+   margin-left: auto;
+   @extend %darkbtnstyle;
+   @extend %transition;
+   &:hover {
+   @extend %lighthover;
+   }
+ }
+}
+
+// info
+.info {
+  background: $footerbgc;
+  padding: 60px 0px;
+  color: #fff;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 145px;
+    margin-left: -20px;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &__nav-item {
+    margin: 16px 0px;
+      @extend %transition;
+      opacity: 1;
+      &:hover {
+        @extend %linkhover;
+    }
+  }
+  &__nav-list {
+    > li:first-child {
+     margin-top: 25px;
+    }
+  }
+  &__dates {
+    margin-left: 14px;
+  }
+  &__address {
+    margin-left: 20px;
+    max-width: 300px;
+    display: inline-block;
+  }
+
+  &__contacts-list {
+    > li {
+      margin-bottom: 33px;
+    }
+    > li:first-child {
+     margin-top: 25px;
+     margin-bottom: 40px;
+     position: relative;
+      .fa-map-marker-alt {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  &__socials-list {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+      
+  }
+  &__social {
+    opacity: 1;
+    @extend %transition;
+    &:hover {
+        @extend %linkhover;
+      }
+  }
+}
+
+// Contact us
+.contact-us {
+  padding: 60px 0px 120px 0px;
+  &__content {
+    display: flex;
+    
+  }
+  &__img-wrap {
+    max-width: 750px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.form {
+  max-width: 390px;
+  width: 100%;
+  margin-right: 30px;
+  input[name="user_name"],
+  input[name="user_product"] 
+  {
+    @extend %inputstyle;
+  }
+  
+  &__req {
+    position: relative;
+    color: $inputcolor;
+    input {
+      font-family: 'TT Hoves';
+      color: $inputcolor;
+      font-size: 14px;
+    }
+    span {
+      position: absolute;
+      top: 3px;
+      left: 20px;
+      font-size: 14px;
+      cursor: text;
+      width: 100%;
+      font-family: 'TT Hoves';
+      color: $inputcolor;
+      
+    }
+    input:invalid + span:before {
+      content: attr(placeholder);
+      position: relative;
+      color: $inputcolor;
+      
+    }
+
+    input:invalid + span:after {
+      content: '*';
+      position: relative;
+      color: red;
+    }
+  
+   input[name="message"] {
+    min-height: 147px;
+    }
+  
+}
+    input[name="message"]:invalid + span:before,
+    input[name="message"]:invalid + span:after {
+        top:-50px;
+      }
+ &__policy {
+   font-size: 14px;
+   letter-spacing: 3%;
+   line-height: 100%;
+   margin: 22px 0px 22px 40px;
+ }
+  &__req-input {
+    @extend %inputstyle;
+  }
+
+ .button {
+   display: block;
+   @extend %darkbtnstyle;
+   @extend %transition;
+   &:hover {
+     @extend %lighthover;
+   }
+ }
+}
+
+
+// Footer
+.footer {
+  background: $footerbgc;
+  padding: 24px 0px;
+  border-top:$linecolor solid 1px;
+  color: $footercolor;
+  text-align: center;
+  &__copyright {
+    opacity: 0.5;
+  }
+}
+
