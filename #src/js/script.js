@@ -26,10 +26,10 @@ function init() {
   console.log('resize');
   width = document.querySelector('.hero__slider-wrap').offsetWidth;
   slider.style.width = width * slides.length + 'px';
-  slides.forEach(item => {
-    item.style.width = width + 'px';
+  // slides.forEach(item => {
+    // item.style.width = width + 'px';
     // item.style.height = 'auto';
-  });
+  // });
   rollSlider();
 }
 window.addEventListener('resize', init);
@@ -40,7 +40,6 @@ let slideNumber = document.getElementById("slide-number"),
 slidesLength.innerHTML = slides.length;
 slideNumber.innerHTML = count + 1;
 
-// slideNumber.innerHTML = count;
 document.querySelector('.prev-btn').addEventListener('click', function () {
   count--;
   
@@ -52,7 +51,6 @@ document.querySelector('.prev-btn').addEventListener('click', function () {
   rollSlider();
 });
 
-console.log(document.querySelector('.next-btn'));
 document.querySelector('.next-btn').addEventListener('click', function () {
   count++;
   slideNumber.innerHTML = count+1;

@@ -1,0 +1,158 @@
+// About
+.about {
+  padding: 60px 0px;
+  .container {
+    display: flex;
+    background-color: $aboutbcg;
+  }
+    &__left-side {
+      padding-left: 100px;
+      padding-top: 30px;
+      margin-bottom: -30px;
+      max-width: 270px;
+      width: 100%;
+      &-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &-top {
+        margin-bottom: 30px;
+        min-height: 265px;
+        width: 100%;
+      }
+      &-bottom {
+        min-height: 140px;
+        width: 100%;
+      }
+    }
+  .right-side {
+    display: flex;
+    padding-top: 30px;
+    &__img-wrap {
+      margin-top: 60px;
+      max-width: 270px;
+      min-height: 345px;
+      &-img img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__main {
+      margin-left: 30px;
+      &_text {
+      font-weight: 300;
+      line-height: 25px;
+      margin: 20px 0px;
+      }
+      .button {
+        background-color: $white;
+        @extend %transition;
+        &:hover {
+          @extend %darkhover;
+        }
+      }
+    }
+  }
+}
+// Media
+@media (max-width: 1200px) {
+   .about {
+      .right-side {
+        margin-left: 30px;
+      }
+    }
+}
+
+@media (max-width: 1092px) {
+    .about {
+      &__left-side {
+        padding-left: 0px;
+      }
+    }
+  }
+@media (max-width: 992px) {
+}
+@media (max-width: 892px) {
+  .about {
+    position: relative;
+    padding-bottom: 330px;
+    width: 100%;
+    &__left-side {
+      max-width: 50%;
+      width: 50%;
+      &-bottom,
+      &-top {
+        text-align: right;
+      }
+    }
+    .right-side {
+      flex-direction: column;
+      max-width: 50%;
+      width: 50%;
+      &__img-wrap {
+        max-width: 100%;
+        width: 100%;
+      }
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &__main {
+        padding-right: 20px;
+        padding-bottom: 20px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        max-width: 550px;
+        .button {
+          background-color: $aboutbcg;
+          border: 1px solid $sliderbtnbord;
+        }
+      }
+     }
+   }
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 610px) {
+  .about {
+    padding: 30px 0px;
+    .container {
+      flex-direction: column;
+    }
+    .right-side {
+      max-width:initial;
+      text-align: center;
+      width: 100%;
+      margin-left: 0px;
+      &__img-wrap {
+        margin-top: 0px;
+      }
+      &__main {
+        position: inherit;
+        text-align: initial;
+        margin-left: 0px;
+        padding-right: 0px;
+      }
+    }
+     &__left-side {
+        max-width:initial;
+        width: 100%;
+        margin: 0 auto;
+        &-bottom,
+        &-top {
+          text-align: center;
+        }
+      }
+  }
+}
+
+@media (max-width: 576px) {
+ 
+}
+
+@media (max-width: 320px) {
+
+}
