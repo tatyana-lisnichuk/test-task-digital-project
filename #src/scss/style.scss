@@ -6,6 +6,8 @@
 @import "tasks.scss";
 @import "projects.scss";
 
+@import "info.scss";
+
 body {
   font-family: 'TT Hoves';
   font-weight: 400;
@@ -192,79 +194,6 @@ body {
   }
 }
 
-
-
-
-
-
-// info
-.info {
-  background: $footerbgc;
-  padding: 60px 0px;
-  color: #fff;
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__logo {
-    width: 145px;
-    margin-left: -20px;
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-  &__nav-item {
-    margin: 16px 0px;
-      @extend %transition;
-      opacity: 1;
-      &:hover {
-        @extend %linkhover;
-    }
-  }
-  &__nav-list {
-    > li:first-child {
-     margin-top: 25px;
-    }
-  }
-  &__dates {
-    margin-left: 14px;
-  }
-  &__address {
-    margin-left: 20px;
-    max-width: 300px;
-    display: inline-block;
-  }
-
-  &__contacts-list {
-    > li {
-      margin-bottom: 33px;
-    }
-    > li:first-child {
-     margin-top: 25px;
-     margin-bottom: 40px;
-     position: relative;
-      .fa-map-marker-alt {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
-  }
-  &__socials-list {
-    display: flex;
-    margin-top: 25px;
-    justify-content: space-between;
-      
-  }
-  &__social {
-    opacity: 1;
-    @extend %transition;
-    &:hover {
-        @extend %linkhover;
-      }
-  }
-}
 
 // Contact us
 .contact-us {
