@@ -7,6 +7,7 @@
 @import "projects.scss";
 
 @import "info.scss";
+@import "footer.scss";
 
 body {
   font-family: 'TT Hoves';
@@ -283,15 +284,5 @@ body {
 }
 
 
-// Footer
-.footer {
-  background: $footerbgc;
-  padding: 24px 0px;
-  border-top:$linecolor solid 1px;
-  color: $footercolor;
-  text-align: center;
-  &__copyright {
-    opacity: 0.5;
-  }
-}
+
 
