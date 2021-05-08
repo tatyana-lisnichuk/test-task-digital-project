@@ -92,13 +92,6 @@
       font-size: 52px;
     }
   }
-  // &__grid-item-3,
-  // &__grid-item-4,
-  // &__grid-item-5 {
-  //   .projects__grid-item-hover {
-  //   padding: 20px 30px;
-  //   }
-  // }
   &__grid-item-3,
   &__grid-item-5  {
     .projects__grid-item-hover-title {
@@ -177,13 +170,7 @@
 }
 @media (max-width: 767px) {
     .projects {
-    &__grid-top {
-      // grid-column-gap: 10px;
-      // margin-bottom: 10px;
-    }
-    &__grid-bottom {
-      // grid-column-gap: 10px;
-    }
+    
     &__grid-item-hover {
       padding: 10px;
     &-title {
@@ -191,24 +178,11 @@
     }
   }
     &__grid-item-3,
-    &__grid-item-4,
-    &__grid-item-5 {
-      .projects__grid-item-hover {
-        // padding: 10px;
-      }
-    }
-    &__grid-item-3,
     &__grid-item-5  {
       .projects__grid-item-hover-title {
       font-size: 18px;
       }
-    
     }
-    // &__grid-item-5 {
-    //   .projects__grid-item-hover {
-    //     padding-right: 30px;
-    //   }
-    // }
   }
 }
 
@@ -225,26 +199,19 @@
     margin-bottom: 20px;
   }
   &__grid-bottom {
-
     grid-column-gap: 0px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
- 
     grid-template-rows: 255px 255px 255px;
     margin-bottom: 20px;
   }    
 
   &__grid-item-hover {
-
-    &-title {
-  
-    }
+      padding: 20px 30px;
   }
   &__grid-item-3,
   &__grid-item-4,
   &__grid-item-5  {
-    // max-height: 350px;
-    // height:100%;
     .projects__grid-item-hover {
       padding: 20px 30px;
     }
@@ -256,11 +223,7 @@
       font-size: 32px;
     }
   }
- .button {
-   display: block;
-   margin-right: 0px;
-   margin-left: auto;
- }
+
 }
 }
 
