@@ -3,6 +3,7 @@
 @import "variables.scss";
 @import "media.scss";
 @import "about.scss";
+@import "tasks.scss";
  
 body {
   font-family: 'TT Hoves';
@@ -192,35 +193,7 @@ body {
 
 
 
-// Tasks
-.tasks {
-  padding: 60px 0px;
-  &__grid {
-    display: flex;
-    margin-top: 60px;
-    justify-content: space-between;
-    // flex-wrap: wrap;
-  }
-  &__item {
-    display: flex;
-  }
-  &__item-num {
-    display: block;
-    font-size: 200px;
-    font-family: $sffont;
-    color: $gray6;
-    line-height: 80%;
-  }
-  &__item-text1 {
-    max-width: 280px;
-    @extend %tasktext;
-  }
-  &__item-text2 {
-    max-width: 420px;
-    @extend %tasktext;
-  }
 
-}
 // Projects
 .projects {
   &__grid-top {
