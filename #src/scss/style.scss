@@ -4,7 +4,8 @@
 @import "media.scss";
 @import "about.scss";
 @import "tasks.scss";
- 
+@import "projects.scss";
+
 body {
   font-family: 'TT Hoves';
   font-weight: 400;
@@ -194,86 +195,7 @@ body {
 
 
 
-// Projects
-.projects {
-  &__grid-top {
-    display: grid;
-    grid-column-gap: 30px;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 60px;
-    margin-bottom: 30px;
-  }
-  &__grid-bottom {
-    display: grid;
-    grid-column-gap: 30px;
-    grid-template-columns: 1fr 1.75fr 1.36fr;
-    min-height: 255px;
-    margin-bottom: 30px;
-  }
-  &__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  }
-  &__grid-item-1,
-  &__grid-item-2,
-  &__grid-item-3,
-  &__grid-item-4,
-  &__grid-item-5 {
-    position: relative;
-    cursor: pointer;
-  }
-  &__grid-item-hover {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    background: $gray1;
-    opacity: 0;
-    padding: 48px 78px 78px 78px;
-    color: $white;
-    @extend %transition;
-    &-title {
-      font-size: 64px;
-      font-weight: 700;
-      text-transform: capitalize;
-    }
-    &-btn {
-      @extend %btntext;
-      background: transparent;
-      color: $white;
-    }
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-  &__grid-item-3,
-  &__grid-item-4,
-  &__grid-item-5 {
-    .projects__grid-item-hover {
-    padding: 20px 30px;
-    }
-  }
-  &__grid-item-3,
-  &__grid-item-5  {
-    .projects__grid-item-hover {
-      padding: 20px 30px;
-    }
-    .projects__grid-item-hover-title {
-      font-size: 32px;
-    }
-  }
- .button {
-   display: block;
-   margin-right: 0px;
-   margin-left: auto;
-   @extend %darkbtnstyle;
-   @extend %transition;
-   &:hover {
-   @extend %lighthover;
-   }
- }
-}
+
 
 // info
 .info {
