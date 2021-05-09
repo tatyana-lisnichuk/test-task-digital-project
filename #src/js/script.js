@@ -26,10 +26,10 @@ function init() {
   console.log('resize');
   width = document.querySelector('.hero__slider-wrap').offsetWidth;
   slider.style.width = width * slides.length + 'px';
-  // slides.forEach(item => {
-    // item.style.width = width + 'px';
-    // item.style.height = 'auto';
-  // });
+  slides.forEach(item => {
+    item.style.width = width + 'px';
+    item.style.height = 'auto';
+  });
   rollSlider();
 }
 window.addEventListener('resize', init);
@@ -63,7 +63,4 @@ document.querySelector('.next-btn').addEventListener('click', function () {
 
 function rollSlider() {
   slider.style.transform = 'translate(-' + count * width + 'px)';
-  
 }
-
-// form

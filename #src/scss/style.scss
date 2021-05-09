@@ -1,8 +1,8 @@
 @import "nullstyle.scss";
 @import "fonts.scss";
 @import "variables.scss";
-@import "media.scss";
 @import "header.scss";
+@import "hero.scss";
 @import "about.scss";
 @import "tasks.scss";
 @import "projects.scss";
@@ -35,91 +35,80 @@ body {
   @extend %btnstyle;
 }
 
-
-// Hero
-.hero {
-  position: relative;
-  .container {
-    display: flex;
-    align-items: center;
-  }
-  .h1 {
-    font-size: 64px;
-    color: $gray4;
-    font-weight: 300;
-    max-width: 278px;
-    line-height: 64px;
-    &__home {
-      font-weight: 700;
-      color: $gray1;
-    }
-  }
-  &__slider-wrap {
-    overflow: hidden;
-    // width: 67%;
-    // max-width: 770px;
+// Media
+@media (max-width: 1200px) {
+ .container {
     width: 100%;
-    // min-height: 830px;
+    padding: 0px 30px;
   }
-  &__slider {
-    display: flex;
-    
+ .right-side {
+    width: 65%;
   }
-  &__slide {
-    width: 100%;
-    max-height: 830px;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    .button {
-      background: $white;
-      position: absolute;
-      z-index: 15;
-      bottom: 0;
-      left: 0;
-      @extend %transition;
-      &:hover 
-        {
-          @extend %darkhover;
-        }
-    }
-    &__slide-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  &__slider-btn {
-    background: #fff;
-    padding: 15px;
-    border: 1px solid $sliderbtnbord;
-    margin-right: 20px;
-    margin-bottom: 90px;
-    @extend %transition;
-    .fas {
-      color: $gray1;
-    }
-    &:hover,
-    &:active {
-      background: $gray6;
-    }
-  }
-  &__slider-btn-div {
-    color: $gray4;
-    font-size: 24px;
-    position: absolute;
-    bottom: 105px;
-    .fa-slash {
-      transform: rotate(90deg);
-      margin-right: 20px;
-      font-size: 20px;
-    }
-  }
-  &__slide-num {
-    display: inline-block;
-    width: 30px;
+ .h2 {
+    font-size: 48px;
   }
 }
+
+@media (max-width: 1092px) {
+  .right-side {
+    width: 65%;
+    padding: 30px 0px;
+  }
+  }
+@media (max-width: 992px) {
+  .container {
+    width: 100%;
+    padding: 0px 20px;
+
+  }
+}
+
+// @media (max-width: 767px) {
+//   .hero {
+//     min-height: 1200px;
+//     .container {
+//       flex-direction: column;
+//     }
+//     .h1 {
+//       max-width: 400px;
+//       margin-bottom: 30px;
+//     }
+//     .right-side {
+//       width: 100%;
+//     }
+//     &__slider {
+      
+//       &__slider-btn-div {
+//         bottom: 0px;
+//       }
+//     &-btn {
+//       margin-bottom: 30px;
+//     }
+//     }
+//   }
+// }
+// @media (max-width: 610px) {
+
+// }
+
+// @media (max-width: 576px) {
+//   .hero {
+//     .h1 {
+//       font-size: 48px;
+//       margin-bottom: 20px;
+//     }
+//   }
+// }
+
+// @media (max-width: 320px) {
+  
+//   .hero {
+//     &__slide {
+//       max-width: 320px;
+//       height:500px;
+//     }
+//   }
+// }
 
 
 
