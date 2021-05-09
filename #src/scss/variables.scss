@@ -91,3 +91,8 @@ $sliderbtnbord: #f2f2f2;
   color: $gray1;
   background: $white;
 }
+%imgcoverstyle {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
