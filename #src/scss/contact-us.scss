@@ -1,0 +1,143 @@
+// Contact us
+.contact-us {
+  padding: 60px 0px 120px 0px;
+  &__content {
+    display: flex;
+    
+  }
+  &__img-wrap {
+    max-width: 750px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.form {
+  .message .message-star {
+      left: 97px;
+      top: 10px;
+    }
+  max-width: 390px;
+  width: 100%;
+  margin-right: 30px;
+  input,
+  textarea {
+    font-family: 'TT Hoves';
+    color: $inputcolor;
+    font-size: 14px;
+  }
+  input[name="user_name"],
+  input[name="user_product"] 
+  {
+    @extend %inputstyle;
+  }
+  textarea {
+    min-height: 147px;
+  }
+  
+  &__req {
+    position: relative;
+    color: $inputcolor;
+    span {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 14px;
+      cursor: text;
+      width: 100%;
+      font-family: 'TT Hoves';
+      color: $inputcolor;
+    }
+    
+    .phone-star {
+      left: 128px;
+    }
+    .mail-star {
+      left: 61px;
+    }
+    
+    input:invalid + span:before
+    // textarea:invalid + span:before 
+    {
+      content: attr(placeholder);
+      position: relative;
+      color: $inputcolor;
+    }
+
+     
+     input:invalid + span:after,
+     textarea:invalid + span:after {
+      content: '*';
+      position: relative;
+      color: red;
+    }
+    
+  
+}
+    // input[name="message"]:invalid + span:before,
+    // input[name="message"]:invalid + span:after {
+    //     top:-50px;
+    //   }
+
+    .message {
+      position: relative;
+      span {
+        position: absolute;
+        top: 0px;
+        color: red;
+      }
+    }
+   
+ &__policy {
+   font-size: 14px;
+   letter-spacing: 3%;
+   line-height: 100%;
+   margin: 22px 0px 22px 40px;
+ }
+  &__req-input {
+    @extend %inputstyle;
+  }
+
+ .button {
+   display: block;
+   @extend %darkbtnstyle;
+   @extend %transition;
+   &:hover {
+     @extend %lighthover;
+   }
+ }
+}
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 1092px) {
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 892px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 670px) {
+  .contact-us {
+    .h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    &__img-wrap {
+      display: none;
+    }
+    .form {
+      margin-right: 0px;
+      margin: 0 auto;
+    }
+  }
+}
+@media (max-width: 576px) {
+}
+@media (max-width: 420px) {
+}
+@media (max-width: 320px) {
+}

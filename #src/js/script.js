@@ -66,13 +66,9 @@ function rollSlider() {
   
 }
 
-// form check
-let email = document.getElementById("mail");
-
-email.addEventListener("input", function (event) {
-  if (email.validity.typeMismatch) {
-    email.setCustomValidity("I expect an e-mail, darling!");
-  } else {
-    email.setCustomValidity("");
-  }
-});
+// form
+function addSpaces(initial) {
+  initial.replace("/([0-9]{3})/", "\1 ");
+  initial.replace("/[0-9]{3} ([0-9]{3})/", "\1 ");
+  return initial;
+}
