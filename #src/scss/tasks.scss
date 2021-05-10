@@ -27,8 +27,6 @@
 }
 
 // Media
-@media (max-width: 1200px) {
-}
 @media (max-width: 1092px) {
   .tasks {
     &__item-text1 {
@@ -43,23 +41,26 @@
 }
 @media (max-width: 892px) {
   .tasks {
-  padding: 60px;
+    .h2 {
+      text-align: center;
+    }
   &__grid {
     flex-wrap: wrap;
+    justify-content: center;
+    :nth-child(2) {
+      margin-top: 30px;
+    }
   }
-  &__item-num {
-    font-size: 180px;
-    margin-bottom: 20px;
+    &__item-num {
+      font-size: 180px;
+      margin-bottom: 20px;
+    }
   }
-  }
-}
-@media (max-width: 767px) {
 }
 @media (max-width: 610px) {
-   .tasks {
-  padding: 60px;
+  .tasks {
+    padding: 60px;
   }
-
 }
 
 @media (max-width: 576px) {
@@ -78,12 +79,10 @@
     &__item-text1 {
       margin-bottom: 30px;
     }
-}
+  }
 }
 @media (max-width: 420px) {
   .tasks {
-  padding: 0px 20px;
+  padding: 30px 20px;
   }
-}
-@media (max-width: 320px) {
 }
