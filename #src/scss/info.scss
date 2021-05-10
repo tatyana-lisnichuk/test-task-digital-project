@@ -7,10 +7,11 @@
     display: flex;
     justify-content: space-between;
   }
-
   &__logo {
-    width: 145px;
+    display: block;
+    max-width: 145px;
     margin-left: -20px;
+    @extend %transition;
     &:hover {
       transform: scale(1.2);
     }
@@ -74,6 +75,11 @@
 @media (max-width: 992px) {
 }
 @media (max-width: 892px) {
+  .info {
+    &__logo {
+      margin-left: 0px;
+    }
+  }
 }
 @media (max-width: 767px) {
   .info {
@@ -83,9 +89,12 @@
       text-align: center;
       justify-content: center;
     }
+    .h4 {
+      margin-top: 30px;
+    }
     &__logo {
-      margin-left: 0px;
       margin-bottom: 20px;
+
     }
   }
 }
