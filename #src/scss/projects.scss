@@ -1,5 +1,6 @@
 // Projects
 .projects {
+  padding: 60px 0px;
   &__grid-top {
     display: grid;
     grid-column-gap: 30px;
@@ -16,9 +17,7 @@
     overflow: hidden;
   }
   &__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    @extend %imgcoverstyle;
   }
   &__grid-item-1,
   &__grid-item-2,
@@ -86,21 +85,20 @@
     &__grid-bottom {
       grid-column-gap: 20px;
     }
-  &__grid-item-hover {
-    padding: 30px;
-    &-title {
-      font-size: 52px;
+    &__grid-item-hover {
+      padding: 30px;
+      &-title {
+        font-size: 52px;
+      }
+    }
+    &__grid-item-3,
+    &__grid-item-5  {
+      .projects__grid-item-hover-title {
+        font-size: 30px;
+      }
     }
   }
-  &__grid-item-3,
-  &__grid-item-5  {
-    .projects__grid-item-hover-title {
-      font-size: 30px;
-    }
-  }
- }
 }
-
 
 @media (max-width: 992px) {
   .projects {
@@ -170,7 +168,6 @@
 }
 @media (max-width: 767px) {
     .projects {
-    
     &__grid-item-hover {
       padding: 10px;
     &-title {
@@ -189,45 +186,53 @@
 
 @media (max-width: 610px) {
   .projects {
-  &__grid-top {
- 
-    grid-column-gap: 0px;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 255px 255px;
-  
-    margin-bottom: 20px;
-  }
-  &__grid-bottom {
-    grid-column-gap: 0px;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 255px 255px 255px;
-    margin-bottom: 20px;
-  }    
-
-  &__grid-item-hover {
-      padding: 20px 30px;
-  }
-  &__grid-item-3,
-  &__grid-item-4,
-  &__grid-item-5  {
-    .projects__grid-item-hover {
+    &__grid-top,
+    &__grid-bottom {
+      grid-column-gap: 0px;
+      grid-row-gap: 20px;
+      grid-template-columns: 1fr;
+      margin-bottom: 20px;
+    }
+    &__grid-top {
+      grid-template-rows: 255px 255px;
+    }
+    &__grid-bottom {
+      grid-template-rows: 255px 255px 255px;
+    }
+    &__grid-item-hover-title {
+      font-size: 56px;
+    }
+    &__grid-item-hover {
       padding: 20px 30px;
     }
-
-  }
-  &__grid-item-3,
-  &__grid-item-5  {
-    .projects__grid-item-hover-title {
-      font-size: 32px;
+    &__grid-item-3,
+    &__grid-item-4,
+    &__grid-item-5 {
+      .projects__grid-item-hover {
+        padding: 20px 30px;
+      }
+    }
+    &__grid-item-3,
+    &__grid-item-5 {
+      .projects__grid-item-hover-title {
+        font-size: 56px;
+      }
     }
   }
-
-}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 560px) {
+  .projects {
+    &__grid-item-hover-title {
+      font-size: 36px;
+    }
+    &__grid-item-3,
+    &__grid-item-5 {
+      .projects__grid-item-hover-title {
+        font-size: 36px;
+      }
+    }
+  }
 }
 @media (max-width: 420px) {
 }
