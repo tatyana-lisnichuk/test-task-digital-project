@@ -12,6 +12,14 @@
     font-weight: 300;
     max-width: 278px;
     line-height: 64px;
+    // animation
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
     &__home {
       font-weight: 700;
       color: $gray1;

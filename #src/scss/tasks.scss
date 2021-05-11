@@ -8,6 +8,10 @@
   }
   &__item {
     display: flex;
+
+    // animation
+    transform: translate(-130%, 0px);
+    transition: all 0.3s ease 0s;
   }
   &__item-num {
     display: block;
@@ -23,6 +27,16 @@
   &__item-text2 {
     max-width: 420px;
     @extend %tasktext;
+  }
+   // animation
+  .tasks__grid._active .tasks__item:nth-child(1) {
+    transition: all 0.8s ease 1s;
+  }
+  .tasks__grid._active .tasks__item:nth-child(2) {
+    transition: all 0.8s ease 0s;
+  }
+  .tasks__grid._active .tasks__item {
+    transform: translate(0px, 0px);
   }
 }
 
