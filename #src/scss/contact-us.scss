@@ -1,6 +1,9 @@
 // Contact us
 .contact-us {
   padding: 60px 0px 120px 0px;
+  .h2 {
+    margin-bottom: 22px;
+  }
   &__content {
     display: flex;
   }
@@ -13,6 +16,7 @@
     }
   }
 }
+
 .form {
   .message .message-star {
       left: 97px;
@@ -35,7 +39,6 @@
   textarea {
     min-height: 147px;
   }
-  
   &__req {
     position: relative;
     color: $inputcolor;
@@ -55,7 +58,6 @@
     .mail-star {
       left: 61px;
     }
-    
     input:invalid + span:before
     {
       content: attr(placeholder);
@@ -66,15 +68,16 @@
      textarea:invalid + span:after {
       content: '*';
       position: relative;
-      color: red;
+      color: $inputsmblcol;
     }
-}
+  }
     .message {
       position: relative;
+      margin-bottom: -10px;
       span {
         position: absolute;
         top: 0px;
-        color: red;
+        color: $inputsmblcol;
       }
     }
    
@@ -82,12 +85,11 @@
    font-size: 14px;
    letter-spacing: 3%;
    line-height: 100%;
-   margin: 22px 0px 22px 40px;
+   margin: 0px 0px 22px 40px;
  }
   &__req-input {
     @extend %inputstyle;
   }
-
  .button {
    display: block;
    @extend %darkbtnstyle;
@@ -96,18 +98,15 @@
      @extend %lighthover;
    }
  }
+  .fa-check:before {
+    color: $gray1;
+    position: absolute;
+    width: 24px;
+    top: 35%;
+    left: 2px;
+  }
 }
 
-@media (max-width: 1200px) {
-}
-@media (max-width: 1092px) {
-}
-@media (max-width: 992px) {
-}
-@media (max-width: 892px) {
-}
-@media (max-width: 767px) {
-}
 @media (max-width: 670px) {
   .contact-us {
     .h2 {
@@ -122,10 +121,4 @@
       margin: 0 auto;
     }
   }
-}
-@media (max-width: 576px) {
-}
-@media (max-width: 420px) {
-}
-@media (max-width: 320px) {
 }

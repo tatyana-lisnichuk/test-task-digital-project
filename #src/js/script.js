@@ -1,10 +1,5 @@
 "use strict";
 
-// $(document).ready(function () {
-//   $('body').hide();
-// });
-// @@include('alert.js');
-
 const iconMenu = document.querySelector(".menu__icon");
 
 if (iconMenu) {
@@ -72,8 +67,6 @@ const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
   window.addEventListener('scroll', animOnScroll);
-  // animOnScroll();
-  // offset();
 function animOnScroll(params) {
   for (let index = 0; index < animItems.length; index++) {
     const animItem = animItems[index];
@@ -100,9 +93,6 @@ function offset(el) {
     top: rect.top + scrollTop, left: rect.left + scrollLeft
   };
 }
-
-
-
-
   animOnScroll();
 }
+
