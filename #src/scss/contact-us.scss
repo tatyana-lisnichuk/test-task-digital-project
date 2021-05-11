@@ -3,7 +3,6 @@
   padding: 60px 0px 120px 0px;
   &__content {
     display: flex;
-    
   }
   &__img-wrap {
     max-width: 750px;
@@ -50,7 +49,6 @@
       font-family: 'TT Hoves';
       color: $inputcolor;
     }
-    
     .phone-star {
       left: 128px;
     }
@@ -59,28 +57,18 @@
     }
     
     input:invalid + span:before
-    // textarea:invalid + span:before 
     {
       content: attr(placeholder);
       position: relative;
       color: $inputcolor;
     }
-
-     
      input:invalid + span:after,
      textarea:invalid + span:after {
       content: '*';
       position: relative;
       color: red;
     }
-    
-  
 }
-    // input[name="message"]:invalid + span:before,
-    // input[name="message"]:invalid + span:after {
-    //     top:-50px;
-    //   }
-
     .message {
       position: relative;
       span {
